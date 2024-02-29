@@ -11,4 +11,19 @@ return {
     },
     config = true,
   },
+  {
+    "ruifm/gitlinker.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- required
+    },
+  },
+  {
+    "tpope/vim-fugitive",
+  },
+  {
+    "tpope/vim-rhubarb",
+    dependencies = {
+      "tpope/vim-fugitive", -- required
+    },
+  },
 }
