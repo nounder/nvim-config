@@ -1,17 +1,5 @@
 return {
   {
-    "NeogitOrg/neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim", -- required
-      "sindrets/diffview.nvim", -- optional - Diff integration
-
-      -- Only one of these is needed, not both.
-      "nvim-telescope/telescope.nvim", -- optional
-      "ibhagwan/fzf-lua", -- optional
-    },
-    config = true,
-  },
-  {
     "ruifm/gitlinker.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim", -- required
@@ -19,6 +7,18 @@ return {
   },
   {
     "tpope/vim-fugitive",
+    priority = 100,
+    keys = {
+      { "<leader>gg", ":G<CR>" },
+      { "<leader>gb", ":G blame<CR>" },
+      { "<leader>gc", ":G commit<CR>" },
+      { "<leader>gd", ":G diff<CR>" },
+      { "<leader>gl", ":G log<CR>" },
+      { "<leader>gp", ":G push<CR>" },
+      { "<leader>gr", ":G read<CR>" },
+      { "<leader>gw", ":G write<CR>" },
+      { "<leader>gx", ":Gvdiff<CR>" },
+    },
   },
   {
     "tpope/vim-rhubarb",
