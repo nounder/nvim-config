@@ -28,6 +28,7 @@
   "mini.comment": { "branch": "main", "commit": "5707e22dd38f7b0d0ea7b273a43948fe203ff3a4" },
   "mini.diff": { "branch": "main", "commit": "5600beba78cebd2790d679b531b6543fe2e91b12" },
   "mini.indentscope": { "branch": "main", "commit": "cf07f19e718ebb0bcc5b00999083ce11c37b8d40" },
+  "mini.move": { "branch": "main", "commit": "251d541a8ab745e81295a53c128829cb2bff18e3" },
   "mini.pairs": { "branch": "main", "commit": "04f58f2545ed80ac3b52dd4826e93f33e15b2af6" },
   "mini.surround": { "branch": "main", "commit": "49e0364b8c9a3258b485c5ece40bb0f3a5e94b1c" },
   "molten-nvim": { "branch": "main", "commit": "66b11de7c3132dcc4521d50039ce2b5f81e64ca2" },
