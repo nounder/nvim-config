@@ -9,7 +9,7 @@ return {
     "tpope/vim-fugitive",
     priority = 100,
     keys = {
-      { "<leader>gg", ":G<CR>" },
+      --{ "<leader>gg", ":G<CR>" },
       { "<leader>gb", ":G blame<CR>" },
       { "<leader>gc", ":G commit<CR>" },
       { "<leader>gd", ":G diff<CR>" },
