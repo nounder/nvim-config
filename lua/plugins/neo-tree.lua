@@ -7,6 +7,7 @@ return {
         --hide_dotfiles = false,
         hide_gitignored = false,
 
+        always_show = { ".gitignore", ".local" },
         never_show = { ".git", ".DS_Store" },
 
         -- use the OS level file watchers to detect changes
