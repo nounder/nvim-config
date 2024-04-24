@@ -14,6 +14,10 @@ return {
         "<leader><space>",
         LazyVim.telescope("files", { show_untracked = true }),
       },
+      {
+        "ff",
+        LazyVim.telescope("files", { show_untracked = true }),
+      },
     },
     -- change some options
     opts = {
@@ -22,6 +26,13 @@ return {
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
+        mappings = {
+          i = {
+            ["<C-j>"] = "move_selection_next",
+            ["<C-k>"] = "move_selection_previous",
+            ["<C-l>"] = "file_edit",
+          },
+        },
       },
     },
   },

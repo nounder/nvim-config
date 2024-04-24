@@ -7,6 +7,8 @@ vim.keymap.set("v", "x", '"_x')
 
 vim.keymap.del("n", ";")
 
+vim.keymap.del("n", "f")
+
 vim.keymap.set("n", ";q", "<Space>bd", { silent = true })
 
 vim.keymap.set("n", "<Space>uz", "<cmd>Zen<cr>", { desc = "Enter Zen" })
