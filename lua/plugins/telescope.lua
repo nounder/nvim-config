@@ -10,6 +10,10 @@ return {
         end,
         desc = "Find Plugin File",
       },
+      {
+        "<leader><space>",
+        LazyVim.telescope("files", { show_untracked = true }),
+      },
     },
     -- change some options
     opts = {
@@ -19,18 +23,6 @@ return {
         sorting_strategy = "ascending",
         winblend = 0,
       },
-    },
-  },
-
-  -- add telescope-fzf-native
-  {
-    "telescope.nvim",
-    dependencies = {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
-      config = function()
-        require("telescope").load_extension("fzf")
-      end,
     },
   },
 }
