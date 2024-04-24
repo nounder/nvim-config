@@ -2,7 +2,13 @@ return {
   {
     "zbirenbaum/copilot.lua",
     opts = {
-      suggestion = { enabled = true, auto_trigger = true, keymap = { accept = "<C-j>" } },
+      suggestion = {
+        enabled = true,
+        auto_trigger = true,
+        keymap = {
+          accept = "<C-;>",
+        },
+      },
       panel = {
         enabled = true,
         auto_refresh = false,

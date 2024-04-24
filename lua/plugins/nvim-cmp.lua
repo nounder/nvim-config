@@ -16,7 +16,9 @@ return {
       opts.mapping = cmp.mapping.preset.insert({
         ["<CR>"] = cmp.config.disable,
         ["<S-CR>"] = cmp.mapping.confirm({ select = true }),
-        ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-l>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-j>"] = require("cmp").mapping.select_next_item(),
+        ["<C-k>"] = require("cmp").mapping.select_prev_item(),
       })
 
       -- opts.preselect = cmp.PreselectMode.None
