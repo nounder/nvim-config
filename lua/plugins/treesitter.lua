@@ -1,38 +1,47 @@
 return {
-  -- add more treesitter parsers
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      ensure_installed = {
-        "bash",
-        "html",
-        "javascript",
-        "json",
-        "lua",
-        "markdown",
-        "markdown_inline",
-        "python",
-        "query",
-        "regex",
-        "tsx",
-        "typescript",
-        "vim",
-        "yaml",
+      textobjects = {
+        select = {
+          enable = true,
+          keymaps = {
+            ["af"] = "@function.outer",
+            ["if"] = "@function.inner",
+            ["ac"] = "@class.outer",
+            ["ic"] = "@class.inner",
+          },
+        },
+        move = {
+          enable = true,
+          set_jumps = true, -- whether to set jumps in the jumplist
+
+          goto_next_start = {
+            ["]t"] = "@loop.*",
+
+            ["]s"] = { query = "@scope", query_group = "locals", desc = "Next scope" },
+            ["]z"] = { query = "@fold", query_group = "folds", desc = "Next fold" },
+          },
+
+          goto_next_end = {},
+
+          goto_previous_start = {
+            ["[t"] = "@loop.*",
+          },
+
+          goto_previous_end = {
+            ["[M"] = "@function.outer",
+          },
+
+          goto_next = {
+            ["]c"] = "@conditional.outer",
+          },
+
+          goto_previous = {
+            ["[c"] = "@conditional.outer",
+          },
+        },
       },
     },
-  },
-
-  -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
-  -- would overwrite `ensure_installed` with the new value.
-  -- If you'd rather extend the default config, use the code below instead:
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      -- add tsx and treesitter
-      vim.list_extend(opts.ensure_installed, {
-        "tsx",
-        "typescript",
-      })
-    end,
   },
 }
