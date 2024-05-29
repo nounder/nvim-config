@@ -26,4 +26,5 @@ return {
       "tpope/vim-fugitive", -- required
     },
   },
+  { "akinsho/git-conflict.nvim", version = "*", config = true },
 }
