@@ -3,3 +3,7 @@
 -- Add any additional options here
 
 vim.g.lazyvim_python_lsp = "pyright"
+
+vim.opt.relativenumber = false
+
+vim.opt.number = false
