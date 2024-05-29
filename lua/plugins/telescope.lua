@@ -11,7 +11,7 @@ return {
       },
 
       {
-        "fl",
+        "fr",
         function()
           require("telescope.builtin").resume()
         end,
@@ -24,6 +24,11 @@ return {
       {
         "ff",
         LazyVim.telescope("files", { show_untracked = true }),
+      },
+
+      {
+        "fF",
+        LazyVim.telescope("files", { cwd = false }),
       },
 
       {
