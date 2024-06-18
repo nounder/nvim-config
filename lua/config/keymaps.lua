@@ -17,6 +17,20 @@ vim.keymap.set("n", ";q", "<Space>bd", { silent = true })
 
 vim.keymap.set("n", "<Space>uz", "<cmd>Zen<cr>", { desc = "Enter Zen" })
 
+vim.keymap.set(
+  "n",
+  "<leader>bfP",
+  ':let @+=expand("%:p")<CR>',
+  { noremap = true, silent = true, desc = "Copy buffer file path (full)" }
+)
+
+vim.keymap.set(
+  "n",
+  "<leader>bfp",
+  ':let @+=substitute(system("git rev-parse --show-toplevel"), "\\n", "", "") . "/" . expand("%:~:.")<CR>',
+  { noremap = true, silent = true, desc = "Copy buffer file path (relative)" }
+)
+
 vim.keymap.set("n", "<C-/>", function()
   Util.terminal(nil, { border = "rounded" })
 end, { desc = "Terminal (root dir )" })
