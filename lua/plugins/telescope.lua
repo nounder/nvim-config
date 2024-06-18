@@ -19,32 +19,27 @@ return {
 
       {
         "<leader><space>",
-        LazyVim.telescope("files", { show_untracked = true }),
+        LazyVim.pick("auto", { show_untracked = true }),
       },
+
       {
         "ff",
-        LazyVim.telescope("files", { show_untracked = true }),
+        LazyVim.pick("auto", { show_untracked = true }),
       },
 
       {
         "fF",
-        LazyVim.telescope("files", { cwd = false }),
-      },
-
-      {
-        "fb",
-        LazyVim.telescope("buffers"),
+        LazyVim.pick("auto", { root = false, show_untracked = true }),
       },
 
       {
         "/",
-        LazyVim.telescope("current_buffer_fuzzy_find"),
+        "<cmd>Telescope current_buffer_fuzzy_find<cr>",
       },
 
-      {
-        "fg",
-        LazyVim.telescope("live_grep"),
-      },
+      { "fg", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
+
+      { "fG", LazyVim.pick("live_grep", { root = false }), desc = "Grep (Root Dir)" },
 
       {
         "fo",
@@ -58,6 +53,16 @@ return {
 
       {
         "fs",
+        function()
+          require("telescope.builtin").lsp_document_symbols({
+            symbols = LazyVim.config.get_kind_filter(),
+          })
+        end,
+        desc = "Goto Symbol",
+      },
+
+      {
+        "fS",
         function()
           require("telescope.builtin").lsp_dynamic_workspace_symbols({
             symbols = require("lazyvim.config").get_kind_filter(),
