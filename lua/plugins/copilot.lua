@@ -25,8 +25,8 @@ return {
         },
       },
       filetypes = {
-        markdown = true,
-        help = true,
+        markdown = false,
+        help = false,
       },
     },
   },
