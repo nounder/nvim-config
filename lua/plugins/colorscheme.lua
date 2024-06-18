@@ -1,6 +1,10 @@
 local theme_mode = os.getenv("THEME_MODE")
 
 return {
+  { "ellisonleao/gruvbox.nvim", opts = {
+    transparent_mode = false,
+  } },
+
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -15,7 +19,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "gruvbox",
     },
   },
 }
