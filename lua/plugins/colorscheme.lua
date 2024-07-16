@@ -1,9 +1,13 @@
 local theme_mode = os.getenv("THEME_MODE")
 
 return {
-  { "ellisonleao/gruvbox.nvim", opts = {
-    transparent_mode = false,
-  } },
+  {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      transparent_mode = false,
+      flavour = theme_mode == "light" and "latte" or "dark",
+    },
+  },
 
   {
     "catppuccin/nvim",
@@ -19,7 +23,13 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = function()
+        if theme_mode == "light" then
+          require("catppuccin").load()
+        else
+          require("gruvbox").load()
+        end
+      end,
     },
   },
 }
