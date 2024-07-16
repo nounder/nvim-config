@@ -4,7 +4,7 @@ return {
   {
     "ellisonleao/gruvbox.nvim",
     opts = {
-      transparent_mode = false,
+      transparent_mode = true,
       flavour = theme_mode == "light" and "latte" or "dark",
     },
   },

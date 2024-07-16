@@ -7,3 +7,7 @@ vim.g.lazyvim_python_lsp = "pyright"
 vim.opt.relativenumber = false
 
 vim.opt.number = false
+
+vim.opt.cursorline = false
+
+vim.g.root_spec = { "cwd" }
