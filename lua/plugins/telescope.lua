@@ -32,11 +32,6 @@ return {
         LazyVim.pick("auto", { root = true, show_untracked = true }),
       },
 
-      {
-        "/",
-        "<cmd>Telescope current_buffer_fuzzy_find<cr>",
-      },
-
       { "fg", LazyVim.pick("live_grep", { root = false }), desc = "Grep (Root Dir)" },
 
       { "fG", LazyVim.pick("live_grep", { root = true }), desc = "Grep (Root Dir)" },
