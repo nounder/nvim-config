@@ -13,3 +13,5 @@ vim.opt.cursorline = false
 vim.g.root_spec = { "cwd" }
 
 vim.opt.conceallevel = 0
+
+vim.opt.tabstop = 4
