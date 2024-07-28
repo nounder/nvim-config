@@ -13,7 +13,7 @@ return {
       disable_hint = true,
     },
     keys = {
-      { "<leader>gg", ":Neogit<CR>" },
+      { "<leader>gg", "<cmd>Neogit kind=replace<CR>" },
     },
     config = true,
   },
