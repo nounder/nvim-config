@@ -18,7 +18,9 @@ vim.keymap.set("n", ";q", "<Space>bd", { silent = true })
 
 vim.keymap.set("n", "<Space>uz", "<cmd>Zen<cr>", { desc = "Enter Zen" })
 
-vim.keymap.set("n", "qq", "<cmd>q<cr>", { desc = "Quit" })
+vim.keymap.set({ "i" }, "<C-l>", function()
+  require("luasnip").expand()
+end, { silent = true })
 
 vim.keymap.set(
   "n",
