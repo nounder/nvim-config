@@ -1,8 +1,15 @@
 return {
+  -- { "honza/vim-snippets" },
+  { "rafamadriz/friendly-snippets" },
+
   {
-    "rafamadriz/friendly-snippets",
-    config = function()
-      require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets/" } })
+    "hrsh7th/vim-vsnip",
+    init = function()
+      vim.g.vsnip_filetypes = {
+        typescript = { "javascript" },
+        javascriptreact = { "javascript" },
+        typescriptreact = { "typescript" },
+      }
     end,
   },
 }
