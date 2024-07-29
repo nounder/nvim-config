@@ -2,11 +2,6 @@ return {
   {
     "hrsh7th/nvim-cmp",
 
-    dependencies = {
-      { "hrsh7th/cmp-vsnip" },
-      { "hrsh7th/vim-vsnip" },
-    },
-
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       local cmp = require("cmp")
@@ -25,14 +20,14 @@ return {
 
       opts.sources = {
         { name = "nvim_lsp" },
-        { name = "vsnip" },
+        { name = "snippets" },
         { name = "buffer" },
         { name = "path" },
       }
 
       opts.snippet = {
         expand = function(args)
-          vim.fn["vsnip#anonymous"](args.body)
+          vim.snippet.expand(args.body)
         end,
       }
     end,

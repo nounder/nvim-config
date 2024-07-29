@@ -17,11 +17,6 @@ vim.keymap.set("v", "c", '"_c')
 vim.keymap.set("n", ";q", "<Space>bd", { silent = true })
 
 vim.keymap.set("n", "<Space>uz", "<cmd>Zen<cr>", { desc = "Enter Zen" })
-
-vim.keymap.set({ "i" }, "<C-l>", function()
-  require("luasnip").expand()
-end, { silent = true })
-
 vim.keymap.set(
   "n",
   "<leader>bfP",
