@@ -8,3 +8,10 @@ vim.api.nvim_create_autocmd("FileType", {
   -- From: https://stackoverflow.com/questions/62459817
   command = "set formatoptions-=o",
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.list = false
+  end,
+})
