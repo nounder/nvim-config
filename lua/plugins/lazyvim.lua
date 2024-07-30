@@ -1,3 +1,9 @@
+local logo = [[
+Welcome back, Rafael!
+]]
+
+logo = string.rep("\n", 8) .. logo .. "\n\n"
+
 return {
   {
     "rcarriga/nvim-notify",
@@ -19,7 +25,11 @@ return {
 
   {
     "nvimdev/dashboard-nvim",
-    enabled = false,
+    opts = {
+      config = {
+        header = vim.split(logo, "\n"),
+      },
+    },
   },
 
   {
