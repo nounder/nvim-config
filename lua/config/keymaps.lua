@@ -16,6 +16,11 @@ vim.keymap.set("v", "c", '"_c')
 
 vim.keymap.set("n", ";q", "<Space>bd", { silent = true })
 
+vim.keymap.set("i", "<M-BS>", "<C-w>", { noremap = true, silent = true })
+
+vim.keymap.set("n", ";a", "i", { noremap = true, silent = true })
+vim.keymap.set("i", ";a", "<Esc>", { noremap = true, silent = true })
+
 vim.keymap.set("n", "<Space>uz", "<cmd>Zen<cr>", { desc = "Enter Zen" })
 vim.keymap.set(
   "n",
