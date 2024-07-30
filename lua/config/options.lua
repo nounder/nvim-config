@@ -16,7 +16,5 @@ vim.opt.conceallevel = 0
 
 vim.opt.tabstop = 4
 
-vim.opt.laststatus = 0
-
 -- Disable horizontal scroll with mouse
 vim.opt.mousescroll = "ver:1,hor:0"
