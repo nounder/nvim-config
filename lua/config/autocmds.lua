@@ -15,3 +15,12 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.list = false
   end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    if vim.bo.filetype == "markdown" then
+      vim.cmd("ZenMode")
+    end
+  end,
+  once = true,
+})
