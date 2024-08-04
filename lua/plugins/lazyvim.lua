@@ -14,12 +14,9 @@ return {
     "akinsho/bufferline.nvim",
     enabled = false,
   },
+
   {
     "nvim-neo-tree/neo-tree.nvim",
-    enabled = false,
-  },
-  {
-    "ANGkeith/telescope-terraform-doc.nvim",
     enabled = false,
   },
 
