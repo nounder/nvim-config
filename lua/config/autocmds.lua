@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-vim.api.nvim_create_autocmd("VimEnter", {
+vim.api.nvim_create_autocmd("BufReadPost", {
   callback = function()
     if vim.bo.filetype == "markdown" then
       vim.cmd("ZenMode")
