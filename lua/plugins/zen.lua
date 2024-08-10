@@ -3,7 +3,7 @@ return {
     "folke/zen-mode.nvim",
     opts = {
       window = {
-        width = 80,
+        width = 100,
 
         options = {
           laststatus = 0,
@@ -16,10 +16,11 @@ return {
   },
   {
     "folke/twilight.nvim",
-    enabled = true,
+    enabled = false,
     opts = {
       dimming = {
-        alpha = 0.6,
+        color = { "#ffffff" },
+        alpha = 0.25,
       },
     },
   },
