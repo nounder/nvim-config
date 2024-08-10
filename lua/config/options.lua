@@ -16,5 +16,9 @@ vim.opt.conceallevel = 0
 
 vim.opt.tabstop = 4
 
+-- some watches cannot handle vim write behaviorr. this fixes it.
+-- Source: https://github.com/oven-sh/bun/issues/8520#issuecomment-2002325950
+vim.opt.backupcopy = "yes"
+
 -- Disable horizontal scroll with mouse
 vim.opt.mousescroll = "ver:1,hor:0"
