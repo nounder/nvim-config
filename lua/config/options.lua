@@ -22,3 +22,7 @@ vim.opt.backupcopy = "yes"
 
 -- Disable horizontal scroll with mouse
 vim.opt.mousescroll = "ver:1,hor:0"
+
+-- Enable the option to require a Prettier config file
+-- If no prettier config file is found, the formatter will not be used
+vim.g.lazyvim_prettier_needs_config = true
