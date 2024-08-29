@@ -14,7 +14,7 @@ vim.g.root_spec = { "cwd" }
 
 vim.opt.conceallevel = 0
 
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 
 -- some watches cannot handle vim write behaviorr. this fixes it.
 -- Source: https://github.com/oven-sh/bun/issues/8520#issuecomment-2002325950
