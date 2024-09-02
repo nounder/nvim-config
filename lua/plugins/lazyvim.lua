@@ -5,7 +5,15 @@ Welcome back, Rafael!
 logo = string.rep("\n", 8) .. logo .. "\n\n"
 
 return {
-
+  {
+    "folke/noice.nvim",
+    enabled = false,
+    opts = {
+      presets = {
+        lsp_doc_border = true,
+      },
+    },
+  },
   {
     "rcarriga/nvim-notify",
     enabled = false,
