@@ -1,10 +1,16 @@
 return {
   {
     "yetone/avante.nvim",
+    enabled = true,
     event = "VeryLazy",
     lazy = false,
     opts = {
-      hints = { enabled = true },
+      ignore_filetypes = {
+        markdown = true,
+      },
+      hints = {
+        enabled = false,
+      },
     },
     build = ":AvanteBuild", -- This is optional, recommended tho. Also note that this will block the startup for a bit since we are compiling bindings in Rust.
     dependencies = {
@@ -28,21 +34,16 @@ return {
           },
         },
       },
-      {
-        -- Make sure to setup it properly if you have lazy=true
-        "MeanderingProgrammer/render-markdown.nvim",
-        opts = {
-          file_types = { "markdown", "Avante" },
-        },
-        ft = { "markdown", "Avante" },
-      },
     },
   },
 
   {
     "supermaven-inc/supermaven-nvim",
+    enabled = true,
     opts = {
-      --disable_keymaps = true,
+      ignore_filetypes = {
+        markdown = true,
+      },
       keymaps = {
         accept_suggestion = "<C-;>",
         accept_word = "<C-j>",
