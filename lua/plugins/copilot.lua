@@ -39,10 +39,17 @@ return {
 
   {
     "supermaven-inc/supermaven-nvim",
+    cmd = {
+      "SupermavenStart",
+    },
+    keys = {
+      { "<leader>ac", "<cmd>SupermavenStart<cr>", desc = "Enable Supermaven" },
+    },
     enabled = true,
     opts = {
       ignore_filetypes = {
         markdown = true,
+        toggleterm = true,
       },
       keymaps = {
         accept_suggestion = "<C-;>",
